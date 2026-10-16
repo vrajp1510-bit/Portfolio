@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>International Marketing</title></head><body><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<header class="top"><div class="topin"><a class="brand" href="../index.html">Vraj Patel</a><nav aria-label="Main"><a href="../index.html" aria-current="page">Home</a><a href="../projects.html">Projects</a><a href="../reading.html">Reading</a><button id="theme" type="button">Dark mode</button></nav></div></header>
+<div class="wrap">
+<main>
+<div class="crumbs"><a href="../index.html">Home</a> / Courses / International Marketing</div>
+<div class="pagehead"><span class="tag">BUS 447 &middot; Simon Fraser University</span><h1>International Marketing</h1>
+<p class="lede">A netnography of Aritzia: what consumers say about a brand when they talk to each other online.</p></div>
+<section class="proj"><div><p class="label">Project</p><h2>Netnography market research: Aritzia</h2></div>
+<p>Netnography studies what people say in online communities to understand how they feel about a brand. I designed an AI-assisted research workflow using Claude and the Apify Reddit Scraper connector to collect real consumer comments from Reddit. Every comment stays traceable to its source thread.</p>
+<ul><li>I organized the data in a multi-tab Excel workbook and coded the comments into themes.</li><li>For each theme I summarized how often it came up and whether the sentiment was positive or negative.</li><li>I checked the AI-generated coding myself for accuracy.</li><li>I then applied Hofstede's cultural dimensions to turn the findings into brand positioning recommendations.</li></ul>
+<div class="tablewrap"><table><thead><tr><th>Measure</th><th>Result</th></tr></thead><tbody><tr><td>Comments coded</td><td>135 from 3 subreddits (r/PetiteFashionAdvice, r/femalefashionadvice, r/Anticonsumption)</td></tr><tr><td>Themes</td><td>10, led by Fit and Sizing (24%), Quality and Durability (16%) and Competitor Comparison (13%)</td></tr><tr><td>Sentiment</td><td>31% positive, 25% mixed, 24% negative, 19% neutral</td></tr><tr><td>Tools</td><td>Claude, Apify Reddit Scraper, Excel</td></tr></tbody></table></div>
+<div class="files"><span class="label">Files</span><a href="../docs/netnography-workbook.html">View workbook</a></div>
+<p class="muted"><b>Skills:</b> market research, qualitative coding, sentiment analysis, AI research tools, Excel, cultural analysis.</p>
+</section>
+</main>
+<footer><span>Vraj Patel, Simon Fraser University</span><span>vrajp1510@gmail.com</span></footer>
+</div><script>
+(function(){try{if("scrollRestoration" in history)history.scrollRestoration="manual"}catch(e){}
+function top(){if(!location.hash){window.scrollTo({top:0,left:0,behavior:"instant"});document.documentElement.scrollTop=0;document.body.scrollTop=0}}
+top();addEventListener("pageshow",top);addEventListener("load",top);
+})();
+(function(){var r=document.documentElement,b=document.getElementById("theme");
+function cur(){var t=r.getAttribute("data-theme");if(t)return t;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+try{var s=localStorage.getItem("vp-theme");if(s)r.setAttribute("data-theme",s)}catch(e){}
+function lab(){b.textContent=cur()==="dark"?"Light mode":"Dark mode"}lab();
+b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("vp-theme",n)}catch(e){}lab()});
+})();
+(function(){var d=document,r=d.documentElement,rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+r.classList.add("js");
+var bar=d.createElement("div");bar.className="progress";d.body.appendChild(bar);
+var bp=d.querySelector(".bphoto"),tick=false;
+function onS(){tick=false;var h=r.scrollHeight-innerHeight,y=scrollY;bar.style.transform="scaleX("+(h>0?y/h:0)+")";if(bp&&!rm&&y<700)bp.style.transform="translate3d(0,"+(y*.12)+"px,0) scale(1.06)"}
+addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(onS)}},{passive:true});onS();
+var els=d.querySelectorAll(".block,.card,.proj,.book,.chips li,figure,.pagehead,.files,details");
+if("IntersectionObserver" in window&&!rm){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+els.forEach(function(el,i){var p=el.parentElement,k=0;if(p){var sib=p.children;for(var j=0;j<sib.length;j++){if(sib[j]===el){k=j;break}}}
+el.classList.add("rv");el.style.transitionDelay=Math.min(k,6)*70+"ms";io.observe(el)})}
+var ty=d.getElementById("typed");if(ty){var w=ty.getAttribute("data-w").split("|"),wi=0,ci=0,del=false;
+if(rm){ty.textContent=w[0]}else{(function t(){var cur=w[wi];if(!del){ci++;ty.textContent=cur.slice(0,ci);if(ci===cur.length){del=true;return setTimeout(t,1600)}setTimeout(t,70)}else{ci--;ty.textContent=cur.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%w.length;return setTimeout(t,300)}setTimeout(t,35)}})()}}
+d.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.button||a.target||rm)return;
+var u=a.getAttribute("href");if(!u||u.charAt(0)==="#"||/^(https?:|mailto:)/.test(u)||/\.(pdf|csv)$/.test(u))return;
+e.preventDefault();r.classList.add("leaving");setTimeout(function(){location.href=a.href},220)});
+addEventListener("pageshow",function(e){if(e.persisted)r.classList.remove("leaving")});
+})();
+(function(){var d=document,rm=matchMedia("(prefers-reduced-motion: reduce)").matches,h=d.querySelector("header.top"),ht=d.querySelector(".banner .herotext");
+function hs(){var y=scrollY;if(h)h.classList.toggle("scrolled",y>8);if(ht&&!rm&&y<900){var p=Math.min(y/520,1);ht.style.opacity=1-p*.9;ht.style.transform="translate3d(0,"+(y*.18)+"px,0)"}}
+var st=d.getElementById("stmt");if(st){var ws=st.textContent.trim().split(" ");st.innerHTML=ws.map(function(w){return "<span>"+w+"</span>"}).join(" ");var sp=st.querySelectorAll("span");
+function sw(){var r=st.getBoundingClientRect(),vh=innerHeight,p=(vh*.85-r.top)/(vh*.55+r.height*.5);p=Math.max(0,Math.min(1,p));var n=p*sp.length;for(var i=0;i<sp.length;i++){var o=Math.max(.16,Math.min(1,n-i+.4));sp[i].style.opacity=rm?1:o}}
+addEventListener("scroll",sw,{passive:true});addEventListener("resize",sw);sw()}
+addEventListener("scroll",hs,{passive:true});hs();
+var cs=d.querySelectorAll("[data-count]");if(cs.length&&"IntersectionObserver" in window&&!rm){var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,to=+el.getAttribute("data-count"),t0=performance.now();(function f(t){var k=Math.min((t-t0)/1400,1),v=1-Math.pow(1-k,4);el.textContent=Math.round(to*v);if(k<1)requestAnimationFrame(f)})(t0)})},{threshold:.6});cs.forEach(function(c){c.textContent="0";co.observe(c)})}
+})();
+(function(){var d=document;function wire(listSel,attr,itemSel){var seg=d.querySelector(".seg");if(!seg)return;
+var items=d.querySelectorAll(itemSel);seg.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+seg.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});var f=b.getAttribute("data-f");
+items.forEach(function(it){var show=f==="all"||it.getAttribute(attr)===f;it.classList.toggle("off",!show)})})}
+if(d.getElementById("pgrid"))wire("#pgrid","data-cat",".pc,section[data-cat]");else if(d.getElementById("shelf"))wire("#shelf","data-t",".book")})();
+</script></body></html>

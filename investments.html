@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Investments</title></head><body><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<header class="top"><div class="topin"><a class="brand" href="../index.html">Vraj Patel</a><nav aria-label="Main"><a href="../index.html" aria-current="page">Home</a><a href="../projects.html">Projects</a><a href="../reading.html">Reading</a><button id="theme" type="button">Dark mode</button></nav></div></header>
+<div class="wrap">
+<main>
+<div class="crumbs"><a href="../index.html">Home</a> / Courses / Investments</div>
+<div class="pagehead"><span class="tag">BUS 315 &middot; Simon Fraser University</span><h1>Investments</h1>
+<p class="lede">Four assignments built from real market data. I did the analysis in Excel and wrote a conclusion for each. Assignments 2 and 3 were done with a partner, Gautam Upadhyaya.</p>
+<a class="btn" href="../files/Vraj_Patel_Investments_Portfolio.pdf">Open the 5-page PDF portfolio</a></div>
+
+<section class="proj" id="a1"><div><p class="label">Assignment 1</p><h2>Gold, stocks and inflation</h2></div>
+<p class="muted">Monthly stock returns, gold prices and CPI, January 1970 to August 2025 (668 months).</p>
+<ul>
+<li><b>Return and risk.</b> Gold averaged 0.86% a month with a standard deviation of 5.67%. Stocks averaged 0.95% with 4.55%. Gold gave a lower return for more risk.</li>
+<li><b>Against inflation.</b> Average annual gold return was 10.1% against 3.6% inflation, yet gold beat inflation in only 30 of 56 years. The 1979 return of +166% lifts the average a lot.</li>
+<li><b>Link to inflation.</b> The monthly correlation between gold returns and inflation was 0.12, so gold looked like a loose hedge at best.</li>
+<li><b>Real price.</b> Adjusted for CPI, the gold price rose about 13 times, from 0.92 to 11.83.</li>
+</ul>
+<figure><div class="img"><img src="../img/fig_gold.png" alt="Annual gold return (bars) and inflation (line), 1970 to 2025."></div><figcaption>Annual gold return (bars) and inflation (line), 1970 to 2025.</figcaption></figure>
+<div class="files"><span class="label">Files</span><a href="../docs/a1-workbook.html">View workbook</a></div>
+</section>
+
+<section class="proj" id="a2"><div><p class="label">Assignment 2 &middot; with a partner</p><h2>Market history and investing rules</h2></div>
+<p class="muted">Monthly U.S. market and risk-free returns, January 1927 to December 2024 (1,176 months).</p>
+<h3>Does the tax treatment matter?</h3>
+<p>I grew $100,000 for 10 years at 8% in two accounts. One pays the 20% tax once at the end. The other pays it every year, so it grows at 6.4%.</p>
+<div class="tablewrap"><table><thead><tr><th>Account</th><th class=n>Value after 10 years</th></tr></thead><tbody><tr><td>Tax paid once, at the end</td><td class=n>$192,714</td></tr><tr><td>Tax paid every year</td><td class=n>$185,959</td></tr><tr><td>Difference</td><td class=n>$6,755</td></tr></tbody></table></div>
+<h3>What if you miss the best or worst months?</h3>
+<p>One dollar invested in 1927 grew to $13,418 by 2024. Removing the 12 best months cut that to $1,338. Removing the 12 worst months raised it to $182,367.</p>
+<figure><div class="img"><img src="../img/fig_best_worst.png" alt="Value of $1, 1927 to 2024, log scale."></div><figcaption>Value of $1, 1927 to 2024, log scale.</figcaption></figure>
+<h3>Lump sum or monthly investing?</h3>
+<p>I simulated 5,000 one-year outcomes using the market's historical mean (0.95% a month) and standard deviation (5.33%), comparing $1,200 invested on day one with $100 a month.</p>
+<div class="tablewrap"><table><thead><tr><th></th><th class=n>Lump sum</th><th class=n>Monthly ($100)</th></tr></thead><tbody><tr><td>Average ending value</td><td class=n>$1,345</td><td class=n>$1,278</td></tr><tr><td>Worst trial</td><td class=n>$677</td><td class=n>$884</td></tr></tbody></table></div>
+<p>The lump sum finished ahead in about 67% of trials. Monthly investing had the better worst case.</p>
+<div class="files"><span class="label">Files</span><a href="../docs/a2-workbook.html">View workbook</a></div>
+</section>
+
+<section class="proj" id="a3"><div><p class="label">Assignment 3 &middot; with a partner</p><h2>Portfolio optimization and hedging</h2></div>
+<p class="muted">Daily returns for MSFT, IBM, WMT, VZ, SPY, AMZN and QQQ, January 2015 to December 2025 (2,766 trading days).</p>
+<div class="tablewrap"><table><thead><tr><th>Goal</th><th>Weights</th><th class=n>Daily return</th><th class=n>Daily risk</th><th class=n>Sharpe</th></tr></thead><tbody><tr><td>Lowest risk</td><td>IBM 3.6%, WMT 22.5%, VZ 34.3%, SPY 39.5%</td><td class=n>0.047%</td><td class=n>0.93%</td><td class=n>0.051</td></tr><tr><td>Highest Sharpe ratio</td><td>MSFT 33.2%, IBM 5.3%, WMT 38.2%, AMZN 23.3%</td><td class=n>0.091%</td><td class=n>1.26%</td><td class=n>0.072</td></tr><tr><td>Single-index model</td><td>MSFT 38.1%, WMT 35.6%, AMZN 26.4%</td><td class=n>0.095%</td><td class=n>n/a</td><td class=n>0.074</td></tr></tbody></table></div>
+<div class="pair"><figure><div class="img"><img src="../img/fig_frontier.png" alt="Efficient frontier from five optimized portfolios. Single securities sit below it."></div><figcaption>Efficient frontier from five optimized portfolios. Single securities sit below it.</figcaption></figure>
+<ul><li>The lowest-risk portfolio had about 17% less daily volatility than SPY alone (0.93% against 1.12%).</li><li>AMZN had the highest risk of the seven (2.07%) and the optimizer left it out of the lowest-risk mix.</li><li>The single-index model gave a similar answer to the full covariance model with fewer inputs. Betas ran from 0.42 (VZ) to 1.19 (MSFT).</li></ul></div>
+<h3>Hedging a concentrated position</h3>
+<p>The scenario was $10 million of capital with $7 million fixed in Amazon (30,327 shares at $230.82). I looked for positions in the other six securities that cut the variance of the whole portfolio the most.</p>
+<ul><li>The best hedge shorted QQQ (about 96% of capital) and held long positions in SPY, IBM and VZ. QQQ and AMZN have a correlation of 0.75.</li><li>Variance fell from 4.30&times;10<sup>-4</sup> for Amazon alone to 0.86&times;10<sup>-4</sup>. Daily risk dropped from 2.07% to 0.93%, a cut of about 55%.</li><li><b>Limits.</b> The weights rely on historical correlations that can shift quickly, and the model ignores the cost of borrowing shares to short. I would shrink the QQQ short a little, accept slightly more variance and depend less on large-cap tech moving together.</li></ul>
+<div class="files"><span class="label">Files</span><a href="../docs/a3-workbook.html">View workbook</a><a href="../docs/a3-writeup.html">View write-up</a></div>
+</section>
+
+<section class="proj" id="a4"><div><p class="label">Assignment 4</p><h2>Size and value premiums, interest rates, bank risk</h2></div>
+<h3>Part 1. Do small and value stocks earn more?</h3>
+<p class="muted">Monthly returns for 15 portfolios (5 by size, 5 by book-to-market, 5 by earnings-to-price), January 1965 to December 2021 (684 months).</p>
+<div class="tablewrap"><table><thead><tr><th></th><th class=n>Avg. monthly return</th><th class=n>St. deviation</th><th class=n>CAPM alpha</th></tr></thead><tbody><tr><td>Smallest companies (Size1)</td><td class=n>1.16%</td><td class=n>6.4%</td><td class=n>+0.11%</td></tr><tr><td>Largest companies (Size5)</td><td class=n>0.91%</td><td class=n>4.3%</td><td class=n>0.00%</td></tr><tr><td>Highest book-to-market (BM5)</td><td class=n>1.24%</td><td class=n>5.5%</td><td class=n>+0.26%</td></tr><tr><td>Lowest book-to-market (BM1)</td><td class=n>0.94%</td><td class=n>4.8%</td><td class=n>&minus;0.02%</td></tr></tbody></table></div>
+<ul><li><b>Size and value premiums.</b> Small companies and value stocks earned more and were also riskier. Small companies were about 50% more volatile than large ones.</li><li><b>CAPM did not explain it all.</b> If CAPM held perfectly, every alpha would be zero. Small and value portfolios had positive alphas. The largest and the growth portfolios sat at or below zero.</li><li><b>The value premium comes and goes.</b> A long-short portfolio (BM5 minus BM1) earned 0.30% a month overall. It lost 0.17% a month in the 1998 to 2000 dot-com boom, then made 1.11% a month from 2001 to 2004.</li></ul>
+<figure><div class="img"><img src="../img/fig_cum.png" alt="Growth of $1 invested in January 1965, log scale. Highest book-to-market reached $1,654, smallest companies $640, lowest book-to-market $280, largest companies $266."></div><figcaption>Growth of $1 invested in January 1965, log scale. Highest book-to-market reached $1,654, smallest companies $640, lowest book-to-market $280, largest companies $266.</figcaption></figure>
+<figure><div class="img"><img src="../img/fig_alpha.png" alt="CAPM alpha by portfolio, percent per month."></div><figcaption>CAPM alpha by portfolio, percent per month.</figcaption></figure>
+<h3>Part 2. Interest rates and bank risk</h3>
+<div class="pair"><div style="display:grid;gap:12px"><h3 style="font-size:1.05rem">Could the market predict rates?</h3><p>I used the 2021 yield curve to work out the rates it implied for January 2026 and compared them with the actual rates. The market missed: actual rates were roughly 1 to 2 points higher at every maturity.</p><figure><div class="img"><img src="../img/fig_rates.png" alt="Rates implied in January 2021 against actual rates in January 2026."></div><figcaption>Rates implied in January 2021 against actual rates in January 2026.</figcaption></figure></div>
+<div style="display:grid;gap:12px;align-content:start"><h3 style="font-size:1.05rem">How much rate risk does BMO carry?</h3><p>I used BMO's assets and liabilities by maturity band, took each band's midpoint as its duration and gave items with no maturity a duration of zero.</p><ul><li>Dollar duration of assets: 3.44 million million-years.</li><li>Dollar duration of liabilities: 1.15 million million-years.</li><li>Gap: 2.29 million million-years. A 100 basis point rise in rates would cost shareholders about $22.9 billion.</li><li>BMO's reported impact was $1.483 billion. My figure is far larger because the model is simple: band midpoints and no hedges.</li></ul></div></div>
+<div class="files"><span class="label">Files</span><a href="../docs/a4-workbook.html">View workbook</a><a href="../docs/a4-writeup.html">View write-up</a></div>
+</section>
+</main>
+<footer><span>Vraj Patel, Simon Fraser University</span><span>vrajp1510@gmail.com</span></footer>
+</div><script>
+(function(){try{if("scrollRestoration" in history)history.scrollRestoration="manual"}catch(e){}
+function top(){if(!location.hash){window.scrollTo({top:0,left:0,behavior:"instant"});document.documentElement.scrollTop=0;document.body.scrollTop=0}}
+top();addEventListener("pageshow",top);addEventListener("load",top);
+})();
+(function(){var r=document.documentElement,b=document.getElementById("theme");
+function cur(){var t=r.getAttribute("data-theme");if(t)return t;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+try{var s=localStorage.getItem("vp-theme");if(s)r.setAttribute("data-theme",s)}catch(e){}
+function lab(){b.textContent=cur()==="dark"?"Light mode":"Dark mode"}lab();
+b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("vp-theme",n)}catch(e){}lab()});
+})();
+(function(){var d=document,r=d.documentElement,rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+r.classList.add("js");
+var bar=d.createElement("div");bar.className="progress";d.body.appendChild(bar);
+var bp=d.querySelector(".bphoto"),tick=false;
+function onS(){tick=false;var h=r.scrollHeight-innerHeight,y=scrollY;bar.style.transform="scaleX("+(h>0?y/h:0)+")";if(bp&&!rm&&y<700)bp.style.transform="translate3d(0,"+(y*.12)+"px,0) scale(1.06)"}
+addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(onS)}},{passive:true});onS();
+var els=d.querySelectorAll(".block,.card,.proj,.book,.chips li,figure,.pagehead,.files,details");
+if("IntersectionObserver" in window&&!rm){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+els.forEach(function(el,i){var p=el.parentElement,k=0;if(p){var sib=p.children;for(var j=0;j<sib.length;j++){if(sib[j]===el){k=j;break}}}
+el.classList.add("rv");el.style.transitionDelay=Math.min(k,6)*70+"ms";io.observe(el)})}
+var ty=d.getElementById("typed");if(ty){var w=ty.getAttribute("data-w").split("|"),wi=0,ci=0,del=false;
+if(rm){ty.textContent=w[0]}else{(function t(){var cur=w[wi];if(!del){ci++;ty.textContent=cur.slice(0,ci);if(ci===cur.length){del=true;return setTimeout(t,1600)}setTimeout(t,70)}else{ci--;ty.textContent=cur.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%w.length;return setTimeout(t,300)}setTimeout(t,35)}})()}}
+d.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.button||a.target||rm)return;
+var u=a.getAttribute("href");if(!u||u.charAt(0)==="#"||/^(https?:|mailto:)/.test(u)||/\.(pdf|csv)$/.test(u))return;
+e.preventDefault();r.classList.add("leaving");setTimeout(function(){location.href=a.href},220)});
+addEventListener("pageshow",function(e){if(e.persisted)r.classList.remove("leaving")});
+})();
+(function(){var d=document,rm=matchMedia("(prefers-reduced-motion: reduce)").matches,h=d.querySelector("header.top"),ht=d.querySelector(".banner .herotext");
+function hs(){var y=scrollY;if(h)h.classList.toggle("scrolled",y>8);if(ht&&!rm&&y<900){var p=Math.min(y/520,1);ht.style.opacity=1-p*.9;ht.style.transform="translate3d(0,"+(y*.18)+"px,0)"}}
+var st=d.getElementById("stmt");if(st){var ws=st.textContent.trim().split(" ");st.innerHTML=ws.map(function(w){return "<span>"+w+"</span>"}).join(" ");var sp=st.querySelectorAll("span");
+function sw(){var r=st.getBoundingClientRect(),vh=innerHeight,p=(vh*.85-r.top)/(vh*.55+r.height*.5);p=Math.max(0,Math.min(1,p));var n=p*sp.length;for(var i=0;i<sp.length;i++){var o=Math.max(.16,Math.min(1,n-i+.4));sp[i].style.opacity=rm?1:o}}
+addEventListener("scroll",sw,{passive:true});addEventListener("resize",sw);sw()}
+addEventListener("scroll",hs,{passive:true});hs();
+var cs=d.querySelectorAll("[data-count]");if(cs.length&&"IntersectionObserver" in window&&!rm){var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,to=+el.getAttribute("data-count"),t0=performance.now();(function f(t){var k=Math.min((t-t0)/1400,1),v=1-Math.pow(1-k,4);el.textContent=Math.round(to*v);if(k<1)requestAnimationFrame(f)})(t0)})},{threshold:.6});cs.forEach(function(c){c.textContent="0";co.observe(c)})}
+})();
+(function(){var d=document;function wire(listSel,attr,itemSel){var seg=d.querySelector(".seg");if(!seg)return;
+var items=d.querySelectorAll(itemSel);seg.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+seg.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});var f=b.getAttribute("data-f");
+items.forEach(function(it){var show=f==="all"||it.getAttribute(attr)===f;it.classList.toggle("off",!show)})})}
+if(d.getElementById("pgrid"))wire("#pgrid","data-cat",".pc,section[data-cat]");else if(d.getElementById("shelf"))wire("#shelf","data-t",".book")})();
+</script></body></html>
